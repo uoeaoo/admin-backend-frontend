@@ -6,7 +6,6 @@ export type UserDocument = mongoose.HydratedDocument<User>;
 
 @Schema({ collection: 'users', versionKey: false, timestamps: true })
 export class User {
-
   @Prop({ required: true, unique: true })
   username: string;
 
@@ -31,7 +30,7 @@ export class User {
 const UserSchema = SchemaFactory.createForClass(User);
 
 UserSchema.virtual('id').get(function () {
-  this._id.toString();
+  return this._id.toString();
 });
 
 UserSchema.set('toJSON', {
