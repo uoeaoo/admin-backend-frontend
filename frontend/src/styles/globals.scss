@@ -1,12 +1,14 @@
+@use "@/styles/variables" as v;
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: v.$background-light;
+  --foreground: v.$foreground-light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: v.$background-dark;
+    --foreground: v.$foreground-dark;
   }
 }
 

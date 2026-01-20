@@ -1,0 +1,77 @@
+.header {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+
+  top: 10px;
+  z-index: 10;
+  &Container {
+    border-radius: 20px;
+    border: 2px solid #FFF;
+    background: #000;
+    width: 90%;
+    padding: 20 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+      &Logo {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        transition: all 0.3s ease;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            // transform: rotate(720deg);
+            transform: rotate(720deg);
+        }
+      }
+
+      &Nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        gap: 10px;
+
+        &Link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          color: #fff;
+          padding: 5px;
+          border-radius: 5px;
+          transition: all 0.2s ease-in-out;
+          border: 2px solid #fff;
+          &Image {
+            background-image: url("../../assets/fist.webp");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 40px;
+            height: 40px;
+            transition: all 0.2s ease-in-out;
+          }
+
+          &:hover {
+            background-color: #FFF;
+            color: #000;
+          }
+
+          &:hover .headerContainerNavLinkImage {
+            background-image: url("../../assets/finger.webp");
+            transform: rotate(90deg) scaleX(-1);
+          }
+        }
+      }
+    }
+  }
+
